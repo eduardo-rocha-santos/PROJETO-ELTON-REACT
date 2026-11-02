@@ -1,0 +1,88 @@
+.toast {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  max-width: 380px;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.9rem 1rem;
+  border-radius: var(--raio-md);
+  border: 1px solid;
+  box-shadow: var(--sombra-lg);
+  z-index: 100;
+  animation: surgir 0.25s ease-out;
+}
+
+@keyframes surgir {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.sucesso {
+  background-color: var(--cor-sucesso-fundo);
+  border-color: var(--cor-sucesso-borda);
+  color: var(--cor-sucesso);
+}
+
+.erro {
+  background-color: var(--cor-erro-fundo);
+  border-color: var(--cor-erro-borda);
+  color: var(--cor-erro);
+}
+
+.info {
+  background-color: var(--cor-info-fundo);
+  border-color: var(--cor-info-borda);
+  color: var(--cor-info);
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.85rem;
+  background-color: rgba(255, 255, 255, 0.85);
+  flex-shrink: 0;
+}
+
+.message {
+  font-size: 0.925rem;
+  font-weight: 600;
+  line-height: 1.4;
+  flex: 1;
+}
+
+.closeButton {
+  background: transparent;
+  border: none;
+  color: inherit;
+  font-size: 0.95rem;
+  padding: 0.2rem 0.35rem;
+  border-radius: 6px;
+  opacity: 0.75;
+}
+
+.closeButton:hover {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.06);
+}
+
+@media (max-width: 600px) {
+  .toast {
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    max-width: none;
+  }
+}

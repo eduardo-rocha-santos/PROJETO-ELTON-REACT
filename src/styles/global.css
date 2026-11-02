@@ -1,0 +1,102 @@
+:root {
+  /* Paleta de cores limpa e acessível (alto contraste WCAG AA) */
+  --cor-primaria: #2563eb;
+  --cor-primaria-hover: #1d4ed8;
+  --cor-primaria-suave: #eff6ff;
+  --cor-primaria-borda: #bfdbfe;
+
+  --cor-sucesso: #15803d;
+  --cor-sucesso-fundo: #f0fdf4;
+  --cor-sucesso-borda: #bbf7d0;
+
+  --cor-erro: #b91c1c;
+  --cor-erro-fundo: #fef2f2;
+  --cor-erro-borda: #fecaca;
+
+  --cor-info: #1d4ed8;
+  --cor-info-fundo: #eff6ff;
+  --cor-info-borda: #bfdbfe;
+
+  --cor-fundo: #f8fafc;
+  --cor-superficie: #ffffff;
+  --cor-superficie-secundaria: #f1f5f9;
+  --cor-borda: #e2e8f0;
+
+  --cor-texto: #0f172a;
+  --cor-texto-secundario: #475569;
+  --cor-texto-suave: #64748b;
+
+  --raio-sm: 8px;
+  --raio-md: 12px;
+  --raio-lg: 16px;
+
+  --sombra-sm: 0 1px 3px rgba(15, 23, 42, 0.06);
+  --sombra-md: 0 6px 18px rgba(15, 23, 42, 0.08);
+  --sombra-lg: 0 12px 28px rgba(15, 23, 42, 0.14);
+
+  --largura-maxima: 1040px;
+  --transicao-padrao: 0.2s ease;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, sans-serif;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Foco visível para acessibilidade via teclado (Tab) */
+:focus-visible {
+  outline: 3px solid var(--cor-primaria);
+  outline-offset: 2px;
+}
+
+.app-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-container {
+  width: 100%;
+  max-width: var(--largura-maxima);
+  margin: 0 auto;
+  padding: 2rem 1.25rem 3rem;
+  flex: 1;
+}
+
+.footer {
+  background-color: var(--cor-superficie);
+  border-top: 1px solid var(--cor-borda);
+  padding: 1.25rem;
+  text-align: center;
+  color: var(--cor-texto-secundario);
+  font-size: 0.875rem;
+}
+
+/* Responsividade geral */
+@media (max-width: 768px) {
+  .main-container {
+    padding: 1.25rem 1rem 2.5rem;
+  }
+}

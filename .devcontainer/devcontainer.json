@@ -1,0 +1,24 @@
+{
+  "name": "Atividade ReactJs - UCSAL",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:1-22-bookworm",
+  "forwardPorts": [5173],
+  "portsAttributes": {
+    "5173": {
+      "label": "Aplicação React (Vite)",
+      "onAutoForward": "openPreview"
+    }
+  },
+  "postCreateCommand": "npm install",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "MS-CEINTL.vscode-language-pack-pt-br",
+        "dsznajder.es7-react-js-snippets"
+      ],
+      "settings": {
+        "editor.tabSize": 2,
+        "editor.formatOnSave": true
+      }
+    }
+  }
+}

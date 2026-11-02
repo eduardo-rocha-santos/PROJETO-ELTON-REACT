@@ -1,0 +1,126 @@
+.header {
+  background-color: var(--cor-superficie);
+  border-bottom: 1px solid var(--cor-borda);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.inner {
+  max-width: var(--largura-maxima);
+  margin: 0 auto;
+  padding: 0.85rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.brandGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.logoBadge {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background-color: var(--cor-primaria);
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brandName {
+  display: block;
+  font-weight: 800;
+  font-size: 1.05rem;
+  line-height: 1.2;
+  color: var(--cor-texto);
+}
+
+.brandTag {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--cor-texto-suave);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.link {
+  text-decoration: none;
+  color: var(--cor-texto-secundario);
+  font-weight: 600;
+  font-size: 0.925rem;
+  padding: 0.5rem 0.9rem;
+  border-radius: var(--raio-sm);
+  transition: background-color var(--transicao-padrao), color var(--transicao-padrao);
+}
+
+.link:hover {
+  background-color: var(--cor-superficie-secundaria);
+  color: var(--cor-texto);
+}
+
+.activeLink {
+  background-color: var(--cor-primaria-suave);
+  color: var(--cor-primaria);
+}
+
+.statusPill {
+  margin-left: 0.4rem;
+  background-color: var(--cor-superficie-secundaria);
+  border: 1px solid var(--cor-borda);
+  color: var(--cor-texto-secundario);
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+}
+
+.mobileToggle {
+  display: none;
+  background-color: var(--cor-superficie-secundaria);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio-sm);
+  width: 40px;
+  height: 40px;
+  font-size: 1.15rem;
+  color: var(--cor-texto);
+}
+
+@media (max-width: 720px) {
+  .mobileToggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    padding-top: 0.65rem;
+    border-top: 1px solid var(--cor-borda);
+  }
+
+  .navOpen {
+    display: flex;
+  }
+
+  .statusPill {
+    margin-left: 0;
+    margin-top: 0.35rem;
+    text-align: center;
+  }
+}

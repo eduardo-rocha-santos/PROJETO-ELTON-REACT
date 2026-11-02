@@ -1,0 +1,141 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.title {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--cor-texto);
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  color: var(--cor-texto-secundario);
+  font-size: 0.975rem;
+  margin-top: 0.25rem;
+}
+
+.tabContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+}
+
+.sectionTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--cor-texto);
+}
+
+.paragraph {
+  color: var(--cor-texto-secundario);
+  font-size: 0.95rem;
+}
+
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 0.35rem;
+}
+
+.infoCard {
+  background-color: var(--cor-fundo);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio-md);
+  padding: 1.15rem;
+}
+
+.infoCard h3 {
+  font-size: 1rem;
+  margin-bottom: 0.4rem;
+  color: var(--cor-primaria);
+}
+
+.infoCard p {
+  font-size: 0.9rem;
+  color: var(--cor-texto-secundario);
+}
+
+.studyList {
+  padding-left: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  color: var(--cor-texto-secundario);
+}
+
+.studyList strong {
+  color: var(--cor-texto);
+}
+
+.uploadBox {
+  background-color: var(--cor-fundo);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio-md);
+  padding: 1.35rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.buttonGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.primaryButton {
+  background-color: var(--cor-primaria);
+  color: #ffffff;
+  border: none;
+  border-radius: var(--raio-sm);
+  padding: 0.65rem 1.2rem;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: background-color var(--transicao-padrao);
+}
+
+.primaryButton:hover:not(:disabled) {
+  background-color: var(--cor-primaria-hover);
+}
+
+.primaryButton:disabled,
+.secondaryButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.secondaryButton {
+  background-color: var(--cor-superficie);
+  color: var(--cor-texto);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio-sm);
+  padding: 0.65rem 1.1rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: border-color var(--transicao-padrao);
+}
+
+.secondaryButton:hover:not(:disabled) {
+  border-color: var(--cor-primaria);
+  color: var(--cor-primaria);
+}
+
+@media (max-width: 768px) {
+  .cardsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .title {
+    font-size: 1.45rem;
+  }
+
+  .buttonGroup {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,72 @@
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.item {
+  background-color: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio-md);
+  box-shadow: var(--sombra-sm);
+  transition: border-color var(--transicao-padrao);
+}
+
+.itemOpen {
+  border-color: var(--cor-primaria-borda);
+}
+
+.heading {
+  font-size: 1rem;
+}
+
+.trigger {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.1rem 1.25rem;
+  background: transparent;
+  border: none;
+  text-align: left;
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--cor-texto);
+}
+
+.trigger:hover {
+  color: var(--cor-primaria);
+}
+
+.icon {
+  font-size: 1.1rem;
+  color: var(--cor-primaria);
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.itemOpen .icon {
+  transform: rotate(180deg);
+}
+
+/* Transição suave ao expandir e colapsar utilizando CSS Grid */
+.contentWrapper {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease;
+}
+
+.open {
+  grid-template-rows: 1fr;
+}
+
+.contentInner {
+  overflow: hidden;
+}
+
+.contentInner p {
+  padding: 0 1.25rem 1.2rem;
+  color: var(--cor-texto-secundario);
+  font-size: 0.95rem;
+}
